@@ -122,14 +122,10 @@ public class MainActivity extends AppCompatActivity {
                 System.loadLibrary("native-lib");
                 isload = true;
             }
-
-
         }
-
     }
 
     public native void clickOpenAsset();
-
 
     public boolean copyFile(String oldPath$Name, String newPath$Name) {
         try {

@@ -534,7 +534,7 @@ void* openNonAssetInPathLocked(void* pThis, const char* fileName, AccessMode mod
 
         //newpath.path.mString = "/sdcard/mybase.apk";
         //newpath.path.mString = path.path.mString;
-        // "/data/data/com.yyzhu.reinforceres/files/mybase.apk";这个地址在java层修改可读权限也会发生议程
+        // "/data/data/com.yyzhu.reinforceres/files/mybase.apk";这个地址在java层修改可读权限也会发生异常
         newpath.path.mString = apkname;
         OPENNONASSETINPATHLOCKED pFunc = (OPENNONASSETINPATHLOCKED)gCallOrgOpenNonAsset;
         return pFunc(pThis, fileName, mode, newpath);
@@ -564,3 +564,4 @@ ssize_t fileAssetRead(_FileAsset* pThis, void* buf, size_t count){
     }
 
 }
+
